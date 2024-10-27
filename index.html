@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+     />
+    <style>
+        
+     
+      
+    </style>
 </head>
 <header>
     <nav class="navigation">  
@@ -18,8 +30,22 @@
             <a href="#Projects">Projects</a>
             <a href="#Contact">Contact</a>
         </div>
+        <i class="fa fa-bars burger" id="burger" aria-hidden="true"></i>
     </nav>
 </header>
+    <!-- ========================== side navbar ========================== -->
+
+    <div class="menu-panel" id="menu-panel-id">
+        <button class="close-btn" id="btn-close">&times;</button>
+        <ul>
+          <li><a href="#Home">Home</a></li>    
+          <li><a href="#About">About</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+
 <main>
     <section id="Home">
         <div class="home-container"><br>
@@ -55,14 +81,15 @@
             </div>
         </div>
     </section>
-    <section id="About" style="background-color: #323845;"><br>    
-        <div>
-            <h1 class="about-me">About <span style="color: aqua;">Me</span></h1>
-        </div>
+    <section id="About" style="background-color: #323845;"><br> 
+                    <h1 class="about-me">About <span style="color: aqua;">Me</span></h1>
+ 
         <div class="about-container">
+
             <div class="box" id="about-pic">
                 <img class="about-pro-pic" src="/asset/images/chanuka-removebg-preview.png" width="390px" height="350px" alt="">
             </div>
+
             <div class="box" id="about-description">
                 <div class="div-about">
                     <h3 class="about-my-name">I’m Chanuka CSJ</h3>
@@ -79,8 +106,15 @@
                     </p>
                 </div>
             </div>
+        </div> 
+            
+                
            
-        </div>
+            
+                
+               
+           
+    
     </section>
    
     <section id="Services" style="background-color: #151925;"><br>
@@ -89,17 +123,17 @@
         </div>
         <div class="service-container">
             <div class="service-box" id="ui-ux">
-                <img src="/asset/images/icons8-design-80.png" alt="">
+                <img src="/asset/icons/icons8-design-80.png" alt="">
                 <h3>UI/UX Design</h3>
                 <p>UI/UX focuses on creating intuitive, visually appealing interfaces (UI) and enhancing user satisfaction by improving overall experience and usability (UX).</p>
             </div>
             <div class="service-box" id="web-development">
-                <img src="/asset/images/icons8-web-development-96.png" alt="">
+                <img src="/asset/icons/icons8-web-development-96.png" alt="">
                 <h3>Web Development</h3>
                 <p>Web development creates and maintains websites, focusing on design (UI/UX), coding (front-end/back-end), responsiveness, performance, security, scalability, and SEO.</p>
             </div>
             <div class="service-box" id="front-end">
-                <img src="/asset/images/icons8-design-80.png" alt="">
+                <img src="/asset/icons/icons8-design-80.png" alt="">
                 <h3>Front-End Development</h3>
                 <p>Front-end development in Java involves using frameworks like JavaFX or Vaadin to build interactive, visually appealing interfaces for user engagement.</p>
             </div>
@@ -143,10 +177,8 @@
         </div>
     </section>
     <section id="Contact" style="background-color: #151925;"><br>
-        <div>
-            <h1 class="service-title">Contact <span style="color: #01EEFF;">Me</span></h1>
-        </div>
-        <div class="contact-container">
+        <h1 class="service-title">Contact <span style="color: #01EEFF;">Me</span></h1>
+         <div class="contact-container">
             <div class="contact-box" id="contact-form">
                 <div class="message-box">
                     <h3>Name:</h3>
@@ -161,7 +193,7 @@
             <div class="box" id="cobtact-desc">
                 <div class="div-contact">
                     <div class="tellogo">
-                        <img class="plane" src="/asset/images/pngwing.com (1).png" alt="">
+                        <img class="plane" src="/asset/icons/pngwing.com (1).png" alt="">
                     </div>
                   </div>
                 <h3>Call Me +76 687 2812</h3>
@@ -174,5 +206,18 @@
             </div>
         </div>
     </section>
+    <script>
+        const burger = document.getElementById("burger");
+        const menuPanel = document.getElementById("menu-panel-id");
+        const closeBtn = document.getElementById("btn-close");
+    
+        burger.addEventListener("click", () => {
+          menuPanel.classList.toggle("active");
+        });
+    
+        closeBtn.addEventListener("click", () => {
+          menuPanel.classList.remove("active");
+        });
+      </script>
 </body>
 </html>
