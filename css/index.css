@@ -554,7 +554,7 @@ section {
 
 /*--------------------------about------------------------------*/
 .about-me{
-    /* margin-top: 100px; */
+    margin-top: 100px;
     color: white;
     text-align: center;
     font-size: 40px;
@@ -1763,4 +1763,14 @@ textarea{
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 60% 100%;
   }
+}
+footer{
+  border-top: 1px dashed #01EEFF;
+  background: #151925;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+footer p{
+  font-size: 1rem;
 }
